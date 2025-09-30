@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wekair Finds</title>
+    <style>
+        /* CSS for styling the table */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+
+        td img {
+            width: 50px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            table {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Products Table</h1>
+    <table id="ecommerceTable">
+        <thead>
+            <tr>
+                <th>Commerce Firm</th>
+                <th>Icon</th>
+                <th>Product Name</th>
+                <th>Product Category</th>
+                <th>Product Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Sample rows will be added via JavaScript -->
+        </tbody>
+    </table>
+
+    <script>
+        // JavaScript to dynamically populate the table with sample data
+        const products = [
+            {
+                firm: "Amazon",
+                icon: "https://via.placeholder.com/50?text=Amazon",
+                name: "Wireless Headphones",
+                category: "Electronics",
+                description: ["Noise-cancelling", "Bluetooth 5.0", "Up to 20 hours battery life"]
+            },
+            {
+                firm: "eBay",
+                icon: "https://via.placeholder.com/50?text=eBay",
+                name: "Running Shoes",
+                category: "Sports",
+                description: ["Lightweight design", "Breathable material", "Available in multiple sizes"]
+            },
+            {
+                firm: "Walmart",
+                icon: "https://via.placeholder.com/50?text=Walmart",
+                name: "Smart TV",
+                category: "Home Appliances",
+                description: ["4K resolution", "Built-in streaming apps", "Voice control compatible"]
+            },
+            {
+                firm: "Shopify Store",
+                icon: "https://via.placeholder.com/50?text=Shopify",
+                name: "Organic Coffee",
+                category: "Groceries",
+                description: ["Fair trade certified", "Medium roast", "Ground for drip coffee"]
+            },
+            {
+                firm: "Best Buy",
+                icon: "https://via.placeholder.com/50?text=BestBuy",
+                name: "Gaming Laptop",
+                category: "Computers",
+                description: ["High-performance GPU", "16GB RAM", "1TB SSD storage"]
+            },
+            {
+                firm: "Target",
+                icon: "https://via.placeholder.com/50?text=Target",
+                name: "Yoga Mat",
+                category: "Fitness",
+                description: ["Non-slip surface", "Extra thick cushioning", "Eco-friendly material"]
+            },
+            {
+                firm: "AliExpress",
+                icon: "https://via.placeholder.com/50?text=AliExpress",
+                name: "Smartphone Case",
+                category: "Accessories",
+                description: ["Shockproof design", "Wireless charging compatible", "Variety of colors"]
+            },
+            {
+                firm: "Etsy",
+                icon: "https://via.placeholder.com/50?text=Etsy",
+                name: "Handmade Necklace",
+                category: "Jewelry",
+                description: ["Sterling silver", "Customizable engraving", "Artisan crafted"]
+            },
+            {
+                firm: "Amazon",
+                icon: "https://via.placeholder.com/50?text=Amazon",
+                name: "E-Reader",
+                category: "Electronics",
+                description: ["Waterproof", "Adjustable backlight", "Weeks of battery life"]
+            },
+            {
+                firm: "eBay",
+                icon: "https://via.placeholder.com/50?text=eBay",
+                name: "Vintage Watch",
+                category: "Watches",
+                description: ["Mechanical movement", "Leather strap", "Collector's item"]
+            },
+            {
+                firm: "Walmart",
+                icon: "https://via.placeholder.com/50?text=Walmart",
+                name: "Blender",
+                category: "Kitchen Appliances",
+                description: ["High-speed motor", "Multiple speed settings", "Dishwasher safe"]
+            },
+            {
+                firm: "Shopify Store",
+                icon: "https://via.placeholder.com/50?text=Shopify",
+                name: "T-Shirt",
+                category: "Clothing",
+                description: ["100% cotton", "Graphic print", "Unisex sizing"]
+            },
+            {
+                firm: "Best Buy",
+                icon: "https://via.placeholder.com/50?text=BestBuy",
+                name: "Wireless Mouse",
+                category: "Computer Accessories",
+                description: ["Ergonomic design", "Rechargeable battery", "Customizable buttons"]
+            },
+            {
+                firm: "Target",
+                icon: "https://via.placeholder.com/50?text=Target",
+                name: "Board Game",
+                category: "Toys",
+                description: ["Family friendly", "Strategy based", "For 2-4 players"]
+            },
+            {
+                firm: "AliExpress",
+                icon: "https://via.placeholder.com/50?text=AliExpress",
+                name: "Portable Charger",
+                category: "Electronics",
+                description: ["10000mAh capacity", "Fast charging", "Compact size"]
+            },
+            {
+                firm: "Etsy",
+                icon: "https://via.placeholder.com/50?text=Etsy",
+                name: "Custom Mug",
+                category: "Home Goods",
+                description: ["Ceramic material", "Personalized design", "Microwave safe"]
+            },
+            {
+                firm: "Amazon",
+                icon: "https://via.placeholder.com/50?text=Amazon",
+                name: "Fitness Tracker",
+                category: "Wearables",
+                description: ["Heart rate monitor", "Step counter", "Sleep tracking"]
+            },
+            {
+                firm: "eBay",
+                icon: "https://via.placeholder.com/50?text=eBay",
+                name: "Bicycle Helmet",
+                category: "Sports",
+                description: ["Adjustable fit", "Ventilated design", "Safety certified"]
+            },
+            {
+                firm: "Walmart",
+                icon: "https://via.placeholder.com/50?text=Walmart",
+                name: "Coffee Maker",
+                category: "Kitchen Appliances",
+                description: ["Programmable timer", "12-cup capacity", "Auto shut-off"]
+            }
+        ];
+
+        const tableBody = document.querySelector("#ecommerceTable tbody");
+
+        products.forEach(product => {
+            const row = document.createElement("tr");
+
+            // Commerce Firm
+            const firmCell = document.createElement("td");
+            firmCell.textContent = product.firm;
+            row.appendChild(firmCell);
+
+            // Icon
+            const iconCell = document.createElement("td");
+            const img = document.createElement("img");
+            img.src = product.icon;
+            img.alt = `${product.firm} Icon`;
+            iconCell.appendChild(img);
+            row.appendChild(iconCell);
+
+            // Product Name
+            const nameCell = document.createElement("td");
+            nameCell.textContent = product.name;
+            row.appendChild(nameCell);
+
+            // Product Category
+            const categoryCell = document.createElement("td");
+            categoryCell.textContent = product.category;
+            row.appendChild(categoryCell);
+
+            // Product Description as unordered list
+            const descCell = document.createElement("td");
+            const ul = document.createElement("ul");
+            product.description.forEach(item => {
+                const li = document.createElement("li");
+                li.textContent = item;
+                ul.appendChild(li);
+            });
+            descCell.appendChild(ul);
+            row.appendChild(descCell);
+
+            tableBody.appendChild(row);
+        });
+    </script>
+</body>
+</html>
